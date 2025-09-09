@@ -12,31 +12,39 @@ function App() {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Signup", path: "/signup" },
     { name: "FMsystem", path: "/fmsystem" },
     { name: "Biocare", path: "/biocare" },
   ];
 
   return (
-    <div className="bg-gradient-to-br from-[#4CAF50] via-[#4FC3F7] to-[#81C784] text-gray-900 font-sans flex flex-col">
+    <div className="bg-white text-gray-900 font-sans flex flex-col min-h-screen">
       {/* Navbar */}
-      <header className="flex items-center justify-between px-6 py-4 bg-white/70 backdrop-blur-md border-b border-gray-200 shadow-lg">
-        <Link to="/" className="text-2xl font-extrabold tracking-wide text-[#4CAF50]">
-          Meow 🐱
+      <header className="flex items-center justify-between px-8 py-4 bg-white border-b border-gray-200">
+        {/* Logo */}
+        <Link
+          to="/"
+          className="text-2xl font-bold tracking-tight text-gray-900 hover:text-green-700 transition"
+        >
+          Meow 🐄
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex gap-6 text-lg">
+        <nav className="hidden md:flex items-center gap-8 text-lg font-medium">
           {navItems.map((item) => (
             <Link
               key={item.name}
               to={item.path}
-              className="px-3 py-2 rounded-lg hover:bg-[#FFD54F]/70 transition-colors text-gray-800"
+              className="text-gray-700 hover:text-green-700 transition"
             >
               {item.name}
             </Link>
           ))}
+          
         </nav>
+
+        <Link to="/signup" className="bg-green-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-800 transition shadow">
+              Get Started
+            </Link>
 
         {/* Mobile Menu Button */}
         <button
@@ -53,22 +61,29 @@ function App() {
 
       {/* Mobile Dropdown */}
       {menuOpen && (
-        <nav className="md:hidden flex flex-col gap-3 px-6 py-4 bg-[#4CAF50]/90 backdrop-blur-md border-b border-gray-200">
+        <nav className="md:hidden flex flex-col gap-4 px-6 py-4 bg-white border-b border-gray-200">
           {navItems.map((item) => (
             <Link
               key={item.name}
               to={item.path}
               onClick={() => setMenuOpen(false)}
-              className="px-3 py-2 rounded-lg hover:bg-[#FFD54F]/80 transition-colors text-white"
+              className="text-gray-700 hover:text-green-700 transition"
             >
               {item.name}
             </Link>
           ))}
+          <Link
+            to="/signin"
+            onClick={() => setMenuOpen(false)}
+            className="px-5 py-2 border border-gray-300 rounded-lg text-center hover:bg-gray-100 transition"
+          >
+            Sign in
+          </Link>
         </nav>
       )}
 
       {/* Main Content */}
-      <main className="flex-1 p-10 overflow-y-auto bg-white/80">
+      <main className="flex-1">
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/signup" element={<Signup />} />
@@ -162,9 +177,13 @@ function App() {
   </div>
 </footer>
 
-
     </div>
+
+    
   );
 }
 
 export default App;
+
+
+
