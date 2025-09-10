@@ -16,9 +16,6 @@ export default function Landing() {
           }}
         />
 
-        {/* Overlay for slight darkening */}
-        <div className="absolute inset-0 bg-black/20" />
-
         {/* Content */}
         <div className="relative z-10 text-center px-4 pt-24 md:pt-32">
           {/* Trust Badge */}
@@ -42,7 +39,7 @@ export default function Landing() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-green-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-800 transition shadow">
+            <button className="cursor-pointer bg-green-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-800 transition shadow">
               Get Started - it's free
             </button>
           </div>
