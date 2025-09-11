@@ -26,6 +26,11 @@ const faqs = [
     answer:
       "Precision farming, drones, AI-based crop monitoring, and renewable energy solutions are transforming agriculture globally.",
   },
+  {
+    question: "🚜 What technologies are shaping modern agriculture?",
+    answer:
+      "Precision farming, drones, AI-based crop monitoring, and renewable energy solutions are transforming agriculture globally.",
+  }
 ];
 
 export default function FAQSection() {
@@ -36,10 +41,11 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-8">
+    <section className="px-16 pt-6 pb-16 bg-gray-50">
+      <h1 className="text-3xl font-bold text-gray-800 text-center mb-12">FAQs - We have all the answers type shit</h1>
+      <div className="mx-auto px-6 grid lg:grid-cols-2 gap-8">
         {/* Left Card */}
-        <div className="bg-green-800 text-white rounded-xl p-10 flex flex-col justify-between bg-[url('https://i.pinimg.com/1200x/c5/89/71/c589717354d7605694a8ffff192fce17.jpg')] bg-cover bg-center">
+        <div className="bg-green-800 h-[50vh] text-white rounded-xl p-10 flex flex-col justify-between bg-[url('https://i.pinimg.com/1200x/c5/89/71/c589717354d7605694a8ffff192fce17.jpg')] bg-cover bg-center">
           <div>
             <h2 className="text-3xl font-bold mb-2">Frequently Asked Questions</h2>
             <p className="text-gray-100">

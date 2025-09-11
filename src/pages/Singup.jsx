@@ -9,7 +9,7 @@ export default function Signup() {
       {/* Left Side (Image) */}
       <div className="hidden md:flex w-1/2">
         <img
-          src="https://imgs.search.brave.com/MjIU2TmXpJU8sbHYrNwOFk0QcfSNOnB5_XPFVSwC0Q4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTYy/MzAxODQwMS92ZWN0/b3IvdmV0ZXJpbmFy/eS1jYXJlLWZvci1m/YXJtLWFuaW1hbHMt/Y293LXBpZy1jaGlj/a2VuLWhlYWx0aC1j/aGVjay1tZWRpY2lu/ZS1hbmltYWwtdHJl/YXRtZW50LmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1fX1U4/WVNlY0E4Y1pMbEZj/SjEySDI4cVR3enF4/SUtDaklWRnhvZjVI/bWR3PQ"
+          src="https://imgs.search.brave.com/er7mHqEPzVNuMVVPIX4XrrYDB6q0j3SvqXglT6_XYYE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/dmVjdG9yc3RvY2su/Y29tL2kvcHJldmll/dy0xeC80MC80OS9h/bmltYWwtYnJlZWRp/bmctYWJzdHJhY3Qt/Y29uY2VwdC12ZWN0/b3ItNDkzMDQwNDku/anBn"
           alt="Signup Visual"
           className="object-cover w-full h-full rounded-2xl"
         />
