@@ -1,1 +1,39 @@
 @import "tailwindcss";
+
+
+/* Note - Might add framer later rather than these custom animations */
+
+/* signin/signup form animation */
+
+.animate-fade-in { animation: fadeIn 0.7s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: none;} }
+
+/* Hero background animation */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: none;}
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px);}
+  to { opacity: 1; transform: none;}
+}
+@keyframes heroBg {
+  0% { transform: scale(1.1);}
+  100% { transform: scale(1);}
+}
+.animate-fade-in-up {
+  animation: fadeInUp 1s cubic-bezier(.4,0,.2,1) both;
+}
+.animate-fade-in-down {
+  animation: fadeInDown 1s cubic-bezier(.4,0,.2,1) both;
+}
+.animate-hero-bg {
+  animation: heroBg 2s cubic-bezier(.4,0,.2,1) both;
+}
+.delay-100 { animation-delay: .1s; }
+.delay-200 { animation-delay: .2s; }
+.delay-300 { animation-delay: .3s; }
+.delay-400 { animation-delay: .4s; }
+.delay-500 { animation-delay: .5s; }
+.delay-700 { animation-delay: .7s; }

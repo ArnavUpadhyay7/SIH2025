@@ -41,20 +41,23 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="px-16 pt-6 pb-16 bg-gray-50">
-      <h1 className="text-3xl font-bold text-gray-800 text-center mb-12">FAQs - We have all the answers type shit</h1>
-      <div className="mx-auto px-6 grid lg:grid-cols-2 gap-8">
+    <section className="px-4 md:px-16 pt-6 pb-16">
+      <h1 className="text-4xl font-extrabold text-green-900 text-center mb-12 tracking-tight">
+        Frequently Asked Questions
+      </h1>
+      <div className="mx-auto px-2 md:px-6 grid lg:grid-cols-2 gap-8 max-w-6xl">
         {/* Left Card */}
-        <div className="bg-green-800 h-[50vh] text-white rounded-xl p-10 flex flex-col justify-between bg-[url('https://i.pinimg.com/1200x/c5/89/71/c589717354d7605694a8ffff192fce17.jpg')] bg-cover bg-center">
-          <div>
-            <h2 className="text-3xl font-bold mb-2">Frequently Asked Questions</h2>
-            <p className="text-gray-100">
+        <div className="bg-green-800 h-[340px] md:h-[50vh] text-white rounded-2xl p-10 flex flex-col justify-between bg-[url('https://i.pinimg.com/1200x/c5/89/71/c589717354d7605694a8ffff192fce17.jpg')] bg-cover bg-center shadow-xl relative overflow-hidden">
+          <div className="absolute inset-0 bg-green-900/60 rounded-2xl pointer-events-none" />
+          <div className="relative z-10">
+            <h2 className="text-3xl font-bold mb-2">Need More Help?</h2>
+            <p className="text-gray-100 mb-4">
               Have another question? Please contact our team!
             </p>
+            <button className="mt-2 bg-white text-green-700 px-5 py-2 rounded-lg font-semibold hover:bg-green-100 shadow transition">
+              Contact Our Team
+            </button>
           </div>
-          <button className="mt-6 bg-white text-green-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-200 self-start">
-            Contact Our Team
-          </button>
         </div>
 
         {/* Right Accordion */}
@@ -62,18 +65,34 @@ export default function FAQSection() {
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="border border-gray-200 rounded-lg overflow-hidden shadow-sm"
+              className={`border border-gray-200 rounded-xl overflow-hidden shadow transition-all duration-300 ${
+                openIndex === idx ? "bg-green-50 border-green-300 shadow-lg" : "bg-white"
+              }`}
             >
               <button
                 onClick={() => toggleFAQ(idx)}
-                className="w-full flex justify-between items-center p-4 text-left font-medium text-gray-800 hover:bg-gray-100"
+                className="w-full flex justify-between items-center p-5 text-left font-semibold text-green-900 hover:bg-green-100 transition"
               >
-                {faq.question}
-                <span>{openIndex === idx ? "-" : "+"}</span>
+                <span className="flex items-center gap-2">{faq.question}</span>
+                <span
+                  className={`ml-2 text-xl transition-transform duration-300 ${
+                    openIndex === idx ? "rotate-180 text-green-700" : "text-gray-400"
+                  }`}
+                >
+                  ▼
+                </span>
               </button>
-              {openIndex === idx && (
-                <div className="p-4 bg-gray-50 text-gray-600">{faq.answer}</div>
-              )}
+              <div
+                className={`grid transition-all duration-300 ${
+                  openIndex === idx
+                    ? "grid-rows-[1fr] opacity-100"
+                    : "grid-rows-[0fr] opacity-0"
+                }`}
+              >
+                <div className="overflow-hidden">
+                  <div className="p-5 text-gray-700">{faq.answer}</div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
