@@ -34,11 +34,12 @@ const features = [
 ];
 
 const Features = () => {
+  
   return (
-    <section className="px-16 py-12 bg-gray-50">
+    <section className="px-16 py-12">
       
       {/* max-w-6xl just add this below to make it centered */}
-      <div className="max-w-7x mx-auto px-6">
+      <div className="mx-auto md:px-6">
         <h1 className="text-3xl font-bold text-gray-800 text-center mb-2">Key Services</h1>
         <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">
           Empowering the World with Clean Energy Solutions
@@ -65,6 +66,7 @@ const Features = () => {
                 </p>
               </div>
             </div>
+
           ))}
         </div>
       </div>
